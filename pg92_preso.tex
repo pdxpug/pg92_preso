@@ -55,7 +55,7 @@
 
   \begin{verbatim}
           __     __
-         /  \~~~/  \  . o O ( Only 10 thing? )
+         /  \~~~/  \  . o O ( Only 10 things? )
    ,----(     oo    )
   /      \__     __/
  /|         (\  |(
@@ -96,7 +96,21 @@
 
 \frame[containsverbatim]
 {
-  \frametitle{3. Replication and Recovery}
+  \frametitle{3. More Monitoring}
+
+  \begin{verbatim}
+          __     __         /                               \
+         /  \~~~/  \  . o O | changes to pg_stat_activity:  |
+   ,----(     oo    )       | procpid renamed to pid        |
+  /      \__     __/        | new column:  pg_stat_activity |
+ /|         (\  |(          |   (active, idle, etc)         |
+^ \   /___\  /\ |           \                               /
+   |__|   |__|-"
+  \end{verbatim}
+}
+\frame[containsverbatim]
+{
+  \frametitle{4. Replication and Recovery}
 
   \begin{verbatim}
           __     __         /                         \
@@ -111,7 +125,7 @@
 
 \frame[containsverbatim]
 {
-  \frametitle{4. Data types}
+  \frametitle{5. Data types}
 
   \begin{verbatim}
           __     __         /                       \
@@ -126,7 +140,7 @@
 
 \frame[containsverbatim]
 {
-  \frametitle{5. Server-Side Languages}
+  \frametitle{6. Server-Side Languages}
 
   \begin{verbatim}
           __     __         /       \
@@ -137,6 +151,76 @@
 ^ \   /___\  /\ |
    |__|   |__|-"
   \end{verbatim}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{7. psql}
+
+  \begin{verbatim}
+          __     __         /                                    \
+         /  \~~~/  \  . o O | \timing now on failed queries, too |
+   ,----(     oo    )       | \d on sequence shows table.column  |
+  /      \__     __/        |    of sequence owner               |
+ /|         (\  |(          \                                    /
+^ \   /___\  /\ |
+   |__|   |__|-"
+  \end{verbatim}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{8. pg\_dump}
+
+  \begin{verbatim}
+          __     __         /                      \
+         /  \~~~/  \  . o O | --exclude-table-data |
+   ,----(     oo    )       \                      /
+  /      \__     __/
+ /|         (\  |(
+^ \   /___\  /\ |
+   |__|   |__|-"
+  \end{verbatim}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{9. configuration files}
+
+  \begin{verbatim}
+          __     __         /                                      \
+         /  \~~~/  \  . o O | postgresql.conf:                     |
+   ,----(     oo    )       | multiple errors reported             |
+  /      \__     __/        |   instead of failing on first one    |
+ /|         (\  |(          | log_timezone set during initdb       |
+^ \   /___\  /\ |           | pg_hba.conf:                         |
+   |__|   |__|-"            |   server won't start with empty file |
+                            \                                      /
+  \end{verbatim}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{ALTER}
+
+  \begin{verbatim}
+          __     __         /                     \
+         /  \~~~/  \  . o O | ALTER ... IF EXISTS |
+   ,----(     oo    )       \                     /
+  /      \__     __/
+ /|         (\  |(
+^ \   /___\  /\ |
+   |__|   |__|-"
+  \end{verbatim}
+}
+
+\frame
+{
+  \begin{center}
+http://www.postgresql.org/docs/devel/static/release-9-2.html
+pdxpug.wordpress.com
+@pdxpug
+  \end{center}
 }
 
 \frame[containsverbatim]
